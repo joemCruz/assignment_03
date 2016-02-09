@@ -29,9 +29,15 @@ def manhattan_distance(a, b):
     """
 
     #[Joseph] Manhattan distance = grid sum
-    x = b[0] - a[0]
-    y = b[1] - a[1]
-    distance = x+y
+    ax = getx(a)
+    ay = gety(a)
+    bx = getx(b)
+    by = gety(b)
+
+    x_dist = abs(bx - ax)
+    y_dist = abs(by - ay)
+
+    distance = x_dist + y_dist
     return distance
 
 
